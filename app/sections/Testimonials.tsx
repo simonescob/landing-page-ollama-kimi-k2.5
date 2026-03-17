@@ -73,7 +73,7 @@ export function Testimonials() {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -138,7 +138,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+          className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center"
         >
           {[
             { value: "50,000+", label: "Happy Customers" },

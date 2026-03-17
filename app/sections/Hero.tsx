@@ -19,15 +19,15 @@ export function Hero() {
           sizes="100vw"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark/95 via-dark/75 to-dark/30 lg:bg-gradient-to-r lg:from-dark/90 lg:via-dark/50 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-cream via-transparent to-transparent lg:bg-gradient-to-t lg:from-cream/30 lg:via-transparent lg:to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-20 pt-32">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 xl:px-12 py-20 pt-32 lg:py-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start lg:items-center">
           {/* Left Column - Text */}
-          <div className="text-white">
+          <div className="text-white lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6"
             >
               Conquer Florida's{" "}
               <span className="text-primary">Heat</span>{" "}
@@ -55,7 +55,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg sm:text-xl text-cream/80 mb-8 max-w-xl"
+              className="text-lg sm:text-xl lg:text-lg xl:text-xl text-cream/80 mb-8 max-w-xl lg:max-w-lg"
             >
               Premium sport shoes engineered for humidity, heat, and the active
               Florida lifestyle. From Miami Beach trails to Orlando theme park
@@ -66,7 +66,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-4 mb-10 lg:mb-12"
             >
               <a
                 href="#products"
@@ -88,44 +88,39 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20"
+              className="grid grid-cols-3 gap-6 lg:gap-8 pt-8 border-t border-white/20"
             >
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-primary">
+                <div className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold text-primary">
                   50K+
                 </div>
-                <div className="text-sm text-cream/70">Happy Floridians</div>
+                <div className="text-sm text-cream/70 mt-1">Happy Floridians</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-primary">
+                <div className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold text-primary">
                   4.9
                 </div>
-                <div className="text-sm text-cream/70">Average Rating</div>
+                <div className="text-sm text-cream/70 mt-1">Average Rating</div>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-primary">
+                <div className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-bold text-primary">
                   24h
                 </div>
-                <div className="text-sm text-cream/70">FL Delivery</div>
+                <div className="text-sm text-cream/70 mt-1">FL Delivery</div>
               </div>
             </motion.div>
           </div>
 
           {/* Right Column - Newsletter Form */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="hidden lg:block"
+            className="lg:col-span-5"
           >
             <NewsletterForm />
           </motion.div>
         </div>
-      </div>
-
-      {/* Mobile Newsletter - Shows below on mobile */}
-      <div className="lg:hidden relative z-10 px-4 pb-12 -mt-20">
-        <NewsletterForm />
       </div>
     </section>
   );
